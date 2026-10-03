@@ -11,10 +11,10 @@
     <meta property="og:description" content="Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.">
     <meta property="og:image" content="assets/images/cover1.png">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts Cinematic & Elegant -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700&family=Courier+Prime:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -28,9 +28,12 @@
             --bg-card: rgba(20, 20, 20, 0.85);
             --text-gold: #E6C687;
             --text-light: #EEEEEE;
-            --font-cinzel: 'Cinzel', serif;
-            --font-script: 'Great Vibes', cursive;
-            --font-montserrat: 'Montserrat', sans-serif;
+            
+            /* Font Sinematik */
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-script: 'Alex Brush', cursive;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            
             --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             --shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
@@ -40,14 +43,14 @@
         body {
             background-color: var(--bg-dark);
             color: var(--text-light);
-            font-family: var(--font-montserrat);
+            font-family: var(--font-sans);
             font-size: 14px;
             line-height: 1.6;
             overflow-x: hidden;
             background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 100%);
         }
 
-        h1, h2, h3, .subtitle { font-family: var(--font-cinzel); }
+        h1, h2, h3, .subtitle { font-family: var(--font-serif); }
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
         .hidden { display: none !important; }
@@ -65,7 +68,7 @@
             padding: 12px 28px;
             border-radius: 30px;
             border: none;
-            font-family: var(--font-montserrat);
+            font-family: var(--font-sans);
             font-size: 13px;
             font-weight: 700;
             letter-spacing: 1px;
@@ -89,7 +92,7 @@
             padding: 10px 24px;
             border-radius: 30px;
             border: 1px solid var(--gold-primary);
-            font-family: var(--font-montserrat);
+            font-family: var(--font-sans);
             font-size: 12px;
             font-weight: 600;
             cursor: pointer;
@@ -105,7 +108,7 @@
             color: #000;
         }
 
-        /* 1. COVER SECTION */
+        /* 1. COVER SECTION (Tampilan Bawah & Responsif Wajah) */
         .cover-section {
             height: 100vh;
             width: 100vw;
@@ -114,8 +117,9 @@
             left: 0;
             z-index: 9999;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: flex-end; /* Memindahkan konten ke area bawah */
+            padding-bottom: 40px;
             text-align: center;
             color: var(--text-light);
             transition: opacity 0.8s ease, visibility 0.8s ease;
@@ -136,45 +140,56 @@
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.75) 70%, rgba(10,10,10,0.95) 100%);
+            /* Gradient difokuskan memberi bayangan dibagian bawah */
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.85) 75%, rgba(10,10,10,0.98) 100%);
             z-index: -1;
         }
 
+        .cover-content {
+            width: 100%;
+        }
+
         .cover-content .subtitle {
-            font-size: 13px;
+            font-size: 12px;
             letter-spacing: 4px;
-            margin-bottom: 15px;
+            margin-bottom: 6px;
             color: var(--gold-light);
+            text-transform: uppercase;
         }
 
         .cover-content h1 {
-            font-size: 2.8rem;
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 4px;
             color: var(--gold-primary);
-            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+            white-space: nowrap; /* Memastikan nama pengantin 1 baris */
+            letter-spacing: 1px;
         }
 
         .wedding-date {
-            font-size: 14px;
-            letter-spacing: 3px;
-            margin-bottom: 30px;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
             color: var(--text-gold);
+            font-weight: 500;
         }
 
         .guest-box {
-            background: rgba(0, 0, 0, 0.65);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--gold-primary);
-            padding: 15px 25px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            padding: 12px 20px;
             border-radius: 12px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             display: inline-block;
             box-shadow: var(--shadow);
+            max-width: 90%;
         }
 
-        .guest-box p { font-size: 11px; margin-bottom: 5px; color: #ccc; }
-        .guest-box h3 { font-size: 1.2rem; color: var(--gold-light); font-weight: 600; }
+        .guest-box p { font-size: 11px; margin-bottom: 3px; color: #ccc; }
+        .guest-box h3 { font-size: 1.1rem; color: var(--gold-light); font-weight: 600; letter-spacing: 1px; }
 
         /* BOTTOM NAVIGATION */
         .bottom-nav {
@@ -234,13 +249,13 @@
             text-transform: uppercase;
             margin-bottom: 6px;
         }
-        .section-title h2 { font-size: 2.2rem; color: var(--gold-light); }
+        .section-title h2 { font-size: 2.4rem; color: var(--gold-light); font-weight: 700; letter-spacing: 1px; }
 
         /* 2. INTRODUCTION */
         .intro-section { background: rgba(0, 0, 0, 0.3); }
         .arabic-text {
-            font-family: 'Cinzel', serif;
-            font-size: 1.3rem;
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
             color: var(--gold-primary);
             margin-bottom: 15px;
             line-height: 1.6;
@@ -269,10 +284,10 @@
         }
 
         .photo-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-        .couple-card h3 { font-size: 1.8rem; margin-bottom: 8px; color: var(--gold-primary); }
+        .couple-card h3 { font-size: 2rem; margin-bottom: 8px; color: var(--gold-primary); font-family: var(--font-serif); }
         .parent-info { font-size: 12px; color: #999; margin-bottom: 15px; }
         .ig-link { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--gold-light); }
-        .couple-divider { font-family: var(--font-cinzel); font-size: 2rem; color: var(--gold-primary); margin: -10px 0; }
+        .couple-divider { font-family: var(--font-script); font-size: 3.5rem; color: var(--gold-primary); margin: -10px 0; line-height: 1; }
 
         /* 4. COUNTDOWN */
         .countdown-section { background: rgba(0, 0, 0, 0.5); }
@@ -284,9 +299,9 @@
             border-radius: 12px;
         }
         .countdown-box span:first-child {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            font-family: var(--font-cinzel);
+            font-family: var(--font-serif);
             color: var(--gold-primary);
             display: block;
         }
@@ -302,7 +317,7 @@
             text-align: center;
             box-shadow: var(--shadow);
         }
-        .event-card h3 { font-size: 1.5rem; color: var(--gold-primary); margin-bottom: 15px; }
+        .event-card h3 { font-size: 1.7rem; color: var(--gold-primary); margin-bottom: 15px; font-family: var(--font-serif); letter-spacing: 1px; }
         .event-details p { margin-bottom: 8px; font-size: 13px; display: flex; align-items: center; justify-content: center; gap: 8px; color: #ddd; }
         .event-details p i { color: var(--gold-primary); }
         .event-details .address { color: #888; font-size: 12px; margin-bottom: 20px; }
@@ -317,12 +332,19 @@
             background-color: var(--gold-primary);
         }
         .timeline-year { font-size: 12px; font-weight: 700; color: var(--gold-primary); }
-        .timeline-title { font-size: 1.1rem; color: var(--gold-light); margin: 3px 0; }
+        .timeline-title { font-size: 1.2rem; color: var(--gold-light); margin: 3px 0; font-family: var(--font-serif); }
         .timeline-desc { font-size: 12px; color: #aaa; }
 
-        /* 7. GALLERY */
+        /* 7. GALLERY (Proporsional & Tidak Terpotong) */
         .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        .gallery-item { border-radius: 12px; overflow: hidden; height: 180px; cursor: pointer; border: 1px solid rgba(212, 175, 55, 0.2); }
+        .gallery-item { 
+            border-radius: 12px; 
+            overflow: hidden; 
+            aspect-ratio: 4 / 5; /* Rasio fleksibel untuk foto portrait & landscape */
+            cursor: pointer; 
+            border: 1px solid rgba(212, 175, 55, 0.2); 
+            background-color: #111;
+        }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
         .gallery-item:hover img { transform: scale(1.05); }
 
@@ -342,7 +364,7 @@
         .form-group input, .form-group select, .form-group textarea {
             width: 100%; padding: 10px 12px;
             border: 1px solid #333; border-radius: 8px;
-            font-family: var(--font-montserrat); font-size: 13px;
+            font-family: var(--font-sans); font-size: 13px;
             background: #111; color: #fff;
         }
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--gold-primary); }
@@ -354,7 +376,7 @@
         .wish-date { font-size: 10px; color: #666; }
         .wish-text { font-size: 12px; color: #ccc; }
 
-        /* 11. WEDDING GIFT (SINGLE BANK BRI) */
+        /* 11. WEDDING GIFT */
         .gift-desc { font-size: 0.85rem; color: #aaa; margin-bottom: 25px; line-height: 1.5; text-align: center; }
         .gift-cards-wrapper { display: flex; flex-direction: column; gap: 20px; }
 
@@ -445,7 +467,7 @@
         }
 
         .gift-icon-box { font-size: 1.8rem; color: var(--gold-primary); margin-bottom: 8px; }
-        .physical-gift-card h3 { font-family: var(--font-cinzel); font-size: 1.2rem; font-weight: 700; color: var(--gold-light); margin-bottom: 16px; }
+        .physical-gift-card h3 { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--gold-light); margin-bottom: 16px; }
 
         .address-info { text-align: left; font-size: 0.85rem; line-height: 1.8; color: #ccc; max-width: 360px; margin: 0 auto; }
         .address-info strong { color: var(--gold-primary); font-weight: 600; }
@@ -476,8 +498,8 @@
         }
         .closing-photo img { width: 100%; height: 100%; object-fit: cover; }
         .closing-text { font-size: 13px; color: #aaa; max-width: 450px; margin: 0 auto 20px; }
-        .couple-names-closing { font-size: 2rem; color: var(--gold-primary); margin-bottom: 5px; }
-        .thank-you { font-family: var(--font-script); font-size: 2rem; color: var(--gold-light); }
+        .couple-names-closing { font-family: var(--font-serif); font-size: 2.2rem; color: var(--gold-primary); margin-bottom: 5px; }
+        .thank-you { font-family: var(--font-script); font-size: 3rem; color: var(--gold-light); }
 
         /* ANIMATIONS */
         .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -728,7 +750,7 @@
             </div>
         </section>
 
-        <!-- 11. DIGITAL GIFT (BANK BRI & TANPA NO HP) -->
+        <!-- 11. DIGITAL GIFT -->
         <section id="gift" class="section gift-section">
             <div class="container">
                 <div class="section-title fade-up">
@@ -738,7 +760,6 @@
                 <p class="gift-desc fade-up">Doa dan kehadiran Anda merupakan hadiah terindah bagi kami. Namun bagi yang ingin memberikan tanda kasih, dapat melalui:</p>
 
                 <div class="gift-cards-wrapper">
-                    <!-- Kartu ATM Bank BRI -->
                     <div class="atm-card fade-up">
                         <div class="card-header-row">
                             <div class="chip"></div>
@@ -753,7 +774,6 @@
                         </button>
                     </div>
 
-                    <!-- Kartu Pengiriman Kado Fisik (Tanpa No. HP) -->
                     <div class="physical-gift-card fade-up">
                         <div class="gift-icon-box">
                             <i class="fa-solid fa-gift"></i>
@@ -766,7 +786,6 @@
                     </div>
                 </div>
 
-                <!-- Toast Popup -->
                 <div id="toast" class="toast">Nomor rekening berhasil disalin!</div>
             </div>
         </section>
@@ -844,6 +863,7 @@
                 accountNumber: "066401002744535",
                 accountName: "NUR AISYAH",
                 receiver: "NUR AISYAH",
+                phone: "0895361809795",
                 address: "Jl Pampang 2 Lr 4, Makassar"
             },
             rsvp: { apiUrl: "" }
@@ -887,7 +907,6 @@
             document.getElementById("main-maps-btn").href = WEDDING_CONFIG.event.reception.mapsUrl;
             document.getElementById("map-iframe").src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.7431308381467!2d119.4312383!3d-5.1609139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMDknMzkuMyJTIDExOcKwMjUnNTIuNCJF!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid";
 
-            // Gift Configuration
             document.getElementById("gift-account").textContent = WEDDING_CONFIG.gift.accountNumber;
             document.getElementById("gift-account-name").textContent = WEDDING_CONFIG.gift.accountName;
             document.querySelector(".copy-btn").setAttribute("data-clipboard", WEDDING_CONFIG.gift.accountNumber);
