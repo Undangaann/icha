@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Wedding of Icha & Arief</title>
-    <meta name="description" content="Undangan Pernikahan Icha & Arief - 17 Oktober 2026">
+    <title>The Wedding of Arief & Icha</title>
+    <meta name="description" content="Undangan Pernikahan Arief & Icha - 17 Oktober 2026">
     
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="The Wedding of Icha & Arief">
+    <meta property="og:title" content="The Wedding of Arief & Icha">
     <meta property="og:description" content="Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.">
-    <meta property="og:image" content="cover1.png">
+    <meta property="og:image" content="assets/images/cover1.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,7 +56,6 @@
         .section { padding: 70px 0; position: relative; }
         .text-center { text-align: center; }
         .mt-3 { margin-top: 1.5rem; }
-        .mt-4 { margin-top: 2rem; }
         .w-100 { width: 100%; }
 
         /* BUTTONS */
@@ -106,7 +105,7 @@
             color: #000;
         }
 
-        /* 1. COVER SECTION (UPDATED WITH COVER1.PNG) */
+        /* 1. COVER SECTION */
         .cover-section {
             height: 100vh;
             width: 100vw;
@@ -126,7 +125,7 @@
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            background-image: url('cover1.png');
+            background-image: url('assets/images/cover1.png');
             background-size: cover;
             background-position: center top;
             background-repeat: no-repeat;
@@ -355,7 +354,7 @@
         .wish-date { font-size: 10px; color: #666; }
         .wish-text { font-size: 12px; color: #ccc; }
 
-        /* 11. WEDDING GIFT (DARK GOLD ATM CARD STYLE) */
+        /* 11. WEDDING GIFT (SINGLE BANK BRI) */
         .gift-desc { font-size: 0.85rem; color: #aaa; margin-bottom: 25px; line-height: 1.5; text-align: center; }
         .gift-cards-wrapper { display: flex; flex-direction: column; gap: 20px; }
 
@@ -399,7 +398,7 @@
             align-items: center;
             box-shadow: 0 2px 8px rgba(0,0,0,0.4);
         }
-        .bank-logo-img { height: 20px; object-fit: contain; }
+        .bank-logo-img { height: 22px; object-fit: contain; }
 
         .card-number {
             font-family: 'Courier Prime', monospace;
@@ -487,14 +486,14 @@
 </head>
 <body>
 
-    <!-- 1. COVER SECTION (WITH COVER1.PNG) -->
+    <!-- 1. COVER SECTION -->
     <section id="cover" class="cover-section">
         <div class="cover-bg"></div>
         <div class="cover-overlay"></div>
         <div class="cover-content container fade-up">
             <p class="subtitle">THE WEDDING OF</p>
-            <h1 class="couple-names"><span class="groom-name">Arief Purnama, S.E</span> & <span class="bride-name">Nur Aisyah</span></h1>
-            <p class="wedding-date">17 Oktober 2026</p>
+            <h1 class="couple-names"><span class="groom-name">Asnan</span> & <span class="bride-name">Risma</span></h1>
+            <p class="wedding-date">12 Desember 2026</p>
             
             <div class="guest-box">
                 <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
@@ -553,7 +552,7 @@
                     <!-- Groom -->
                     <div class="couple-card fade-up">
                         <div class="photo-wrapper">
-                            <img src="cover1.png" alt="Asnan Makmur" loading="lazy">
+                            <img id="groom-img" src="assets/images/groom.jpg" alt="Asnan Makmur" loading="lazy">
                         </div>
                         <h3 class="groom-full-name">Asnan Makmur</h3>
                         <p class="parent-info">Putra dari<br>Ayah [Nama] & Ibu [Nama]</p>
@@ -565,7 +564,7 @@
                     <!-- Bride -->
                     <div class="couple-card fade-up">
                         <div class="photo-wrapper">
-                            <img src="cover1.png" alt="Rismawati" loading="lazy">
+                            <img id="bride-img" src="assets/images/bride.jpg" alt="Rismawati" loading="lazy">
                         </div>
                         <h3 class="bride-full-name">Rismawati</h3>
                         <p class="parent-info">Putri dari<br>Ayah [Nama] & Ibu [Nama]</p>
@@ -729,7 +728,7 @@
             </div>
         </section>
 
-        <!-- 11. DIGITAL GIFT (DARK GOLD REDESIGN) -->
+        <!-- 11. DIGITAL GIFT (BANK BRI & TANPA NO HP) -->
         <section id="gift" class="section gift-section">
             <div class="container">
                 <div class="section-title fade-up">
@@ -739,12 +738,12 @@
                 <p class="gift-desc fade-up">Doa dan kehadiran Anda merupakan hadiah terindah bagi kami. Namun bagi yang ingin memberikan tanda kasih, dapat melalui:</p>
 
                 <div class="gift-cards-wrapper">
-                    <!-- Kartu ATM Bank BCA (Dark Gold) -->
+                    <!-- Kartu ATM Bank BRI -->
                     <div class="atm-card fade-up">
                         <div class="card-header-row">
                             <div class="chip"></div>
                             <div class="bank-logo-container">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" alt="BCA Logo" class="bank-logo-img">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/BRI_2020.svg" alt="BRI Logo" class="bank-logo-img">
                             </div>
                         </div>
                         <div class="card-number" id="gift-account">0737687529</div>
@@ -754,22 +753,7 @@
                         </button>
                     </div>
 
-                    <!-- Kartu ATM Bank Mandiri (Dark Gold) -->
-                    <div class="atm-card fade-up" id="bank-2-wrapper">
-                        <div class="card-header-row">
-                            <div class="chip"></div>
-                            <div class="bank-logo-container">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Bank_Mandiri_logo_2016.svg" alt="Mandiri Logo" class="bank-logo-img">
-                            </div>
-                        </div>
-                        <div class="card-number" id="gift-account-2">0987654321</div>
-                        <div class="card-holder" id="gift-account-name-2">ASNAN MAKMUR</div>
-                        <button class="btn-copy-floating copy-btn" data-clipboard="0987654321">
-                            <i class="fa-regular fa-copy"></i> Copy
-                        </button>
-                    </div>
-
-                    <!-- Kartu Pengiriman Kado Fisik (Dark Gold) -->
+                    <!-- Kartu Pengiriman Kado Fisik (Tanpa No. HP) -->
                     <div class="physical-gift-card fade-up">
                         <div class="gift-icon-box">
                             <i class="fa-solid fa-gift"></i>
@@ -777,7 +761,6 @@
                         <h3>Kirim Hadiah</h3>
                         <div class="address-info">
                             <p><strong>Nama Penerima :</strong> <span id="gift-receiver">RISMAWATI</span></p>
-                            <p><strong>No. HP :</strong> <span id="gift-phone">0895361809795</span></p>
                             <p><strong>Alamat :</strong> <span id="gift-address">Jl Rappocini Raya Lr 2 No 11, Makassar</span></p>
                         </div>
                     </div>
@@ -792,7 +775,7 @@
         <section id="closing" class="section closing-section text-center">
             <div class="container fade-up">
                 <div class="closing-photo">
-                    <img src="cover1.png" alt="Couple" loading="lazy">
+                    <img src="assets/images/cover1.png" alt="Couple" loading="lazy">
                 </div>
                 <p class="closing-text">
                     Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
@@ -815,7 +798,7 @@
                     mother: "Ibu Nurbiari dg Rabi",
                     instagram: "https://instagram.com",
                     instagramUsername: "",
-                    photo: "groom.jpg"
+                    photo: "assets/images/groom.jpg"
                 },
                 bride: {
                     name: "Nur Aisyah",
@@ -824,7 +807,7 @@
                     mother: "Ibu Syamsiah dg Taco",
                     instagram: "https://instagram.com",
                     instagramUsername: "@nuraisyahh_19",
-                    photo: "bride.jpg"
+                    photo: "assets/images/bride.jpg"
                 }
             },
             event: {
@@ -852,16 +835,15 @@
                 { year: "2026", title: "Pernikahan", description: "Menyatukan niat suci dalam ikatan pernikahan." }
             ],
             gallery: [
-                "cover1.png",
-                "cover1.png",
-                "cover1.png",
-                "cover1.png"
+                "assets/images/gallery-1.jpg",
+                "assets/images/gallery-2.jpg",
+                "assets/images/gallery-3.jpg",
+                "assets/images/gallery-4.jpg"
             ],
             gift: {
                 accountNumber: "066401002744535",
                 accountName: "NUR AISYAH",
                 receiver: "NUR AISYAH",
-                phone: "0895361809795",
                 address: "Jl Pampang 2 Lr 4, Makassar"
             },
             rsvp: { apiUrl: "" }
@@ -884,6 +866,9 @@
             document.querySelector(".groom-full-name").textContent = WEDDING_CONFIG.couple.groom.name;
             document.querySelector(".bride-full-name").textContent = WEDDING_CONFIG.couple.bride.name;
 
+            document.getElementById("groom-img").src = WEDDING_CONFIG.couple.groom.photo;
+            document.getElementById("bride-img").src = WEDDING_CONFIG.couple.bride.photo;
+
             document.querySelectorAll(".parent-info")[0].innerHTML = `Putra dari<br>${WEDDING_CONFIG.couple.groom.father} & ${WEDDING_CONFIG.couple.groom.mother}`;
             document.querySelectorAll(".parent-info")[1].innerHTML = `Putri dari<br>${WEDDING_CONFIG.couple.bride.father} & ${WEDDING_CONFIG.couple.bride.mother}`;
 
@@ -905,14 +890,9 @@
             // Gift Configuration
             document.getElementById("gift-account").textContent = WEDDING_CONFIG.gift.accountNumber;
             document.getElementById("gift-account-name").textContent = WEDDING_CONFIG.gift.accountName;
-            document.querySelectorAll(".copy-btn")[0].setAttribute("data-clipboard", WEDDING_CONFIG.gift.accountNumber);
-
-            document.getElementById("gift-account-2").textContent = WEDDING_CONFIG.gift.accountNumber2;
-            document.getElementById("gift-account-name-2").textContent = WEDDING_CONFIG.gift.accountName2;
-            document.querySelectorAll(".copy-btn")[1].setAttribute("data-clipboard", WEDDING_CONFIG.gift.accountNumber2);
+            document.querySelector(".copy-btn").setAttribute("data-clipboard", WEDDING_CONFIG.gift.accountNumber);
 
             document.getElementById("gift-receiver").textContent = WEDDING_CONFIG.gift.receiver;
-            document.getElementById("gift-phone").textContent = WEDDING_CONFIG.gift.phone;
             document.getElementById("gift-address").textContent = WEDDING_CONFIG.gift.address;
         }
 
