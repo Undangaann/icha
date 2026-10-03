@@ -9,7 +9,7 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="The Wedding of Icha & Arief">
     <meta property="og:description" content="Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.">
-    <meta property="og:image" content="assets/images/cover.jpg">
+    <meta property="og:image" content="cover1.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -106,7 +106,7 @@
             color: #000;
         }
 
-        /* 1. COVER SECTION */
+        /* 1. COVER SECTION (UPDATED WITH COVER1.PNG) */
         .cover-section {
             height: 100vh;
             width: 100vw;
@@ -126,8 +126,10 @@
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
+            background-image: url('cover1.png');
             background-size: cover;
-            background-position: center;
+            background-position: center top;
+            background-repeat: no-repeat;
             z-index: -2;
         }
 
@@ -135,7 +137,7 @@
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.85));
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.75) 70%, rgba(10,10,10,0.95) 100%);
             z-index: -1;
         }
 
@@ -162,7 +164,7 @@
         }
 
         .guest-box {
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.65);
             backdrop-filter: blur(10px);
             border: 1px solid var(--gold-primary);
             padding: 15px 25px;
@@ -353,75 +355,101 @@
         .wish-date { font-size: 10px; color: #666; }
         .wish-text { font-size: 12px; color: #ccc; }
 
-        /* 11. WEDDING GIFT (CARD ATM STYLE) */
-        .gift-desc { font-size: 0.85rem; color: #aaa; margin-bottom: 25px; line-height: 1.5; }
+        /* 11. WEDDING GIFT (DARK GOLD ATM CARD STYLE) */
+        .gift-desc { font-size: 0.85rem; color: #aaa; margin-bottom: 25px; line-height: 1.5; text-align: center; }
         .gift-cards-wrapper { display: flex; flex-direction: column; gap: 20px; }
 
         .atm-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f1f3f6 100%);
+            background: linear-gradient(135deg, #181818 0%, #0d0d0d 100%);
             border-radius: 16px;
             padding: 22px 24px;
             text-align: left;
             position: relative;
-            color: #222;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), inset 0 0 1px rgba(255,255,255,0.8);
-            border: 1px solid rgba(255,255,255,0.2);
+            color: var(--text-light);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7), inset 0 0 1px rgba(212, 175, 55, 0.3);
+            border: 1px solid rgba(212, 175, 55, 0.35);
             overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .atm-card::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 60%);
+            pointer-events: none;
         }
 
         .card-header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+        
         .chip {
             width: 38px; height: 28px;
-            background: linear-gradient(135deg, #e0b034 0%, #ffe89c 50%, #b8860b 100%);
+            background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa771c 100%);
             border-radius: 5px; position: relative;
-            box-shadow: inset 0 0 2px rgba(0,0,0,0.4);
+            box-shadow: inset 0 0 2px rgba(0,0,0,0.6);
         }
-        .chip::after { content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: rgba(0,0,0,0.2); }
-        .bank-logo-img { height: 26px; object-fit: contain; }
+        .chip::after { content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: rgba(0,0,0,0.3); }
+        
+        .bank-logo-container {
+            background: rgba(255, 255, 255, 0.92);
+            padding: 4px 10px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+        .bank-logo-img { height: 20px; object-fit: contain; }
 
         .card-number {
             font-family: 'Courier Prime', monospace;
-            font-size: 1.35rem;
+            font-size: 1.4rem;
             letter-spacing: 2px;
-            color: #111;
+            color: var(--gold-light);
             font-weight: 700;
             margin-bottom: 6px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
         }
 
-        .card-holder { font-size: 0.8rem; text-transform: uppercase; color: #666; letter-spacing: 1px; font-weight: 600; }
+        .card-holder { font-size: 0.8rem; text-transform: uppercase; color: var(--gold-primary); letter-spacing: 1.5px; font-weight: 600; }
 
         .btn-copy-floating {
             position: absolute;
             bottom: 18px; right: 18px;
-            background: #ffffff;
-            color: #222;
-            border: 1px solid #e0e0e0;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-primary));
+            color: #000;
+            border: none;
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.8rem;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
             display: inline-flex; align-items: center; gap: 6px;
             transition: var(--transition);
         }
-        .btn-copy-floating:hover { background: #f0f0f0; transform: translateY(-2px); }
+        .btn-copy-floating:hover {
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(212, 175, 55, 0.4);
+        }
 
         .physical-gift-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f7f8fa 100%);
+            background: linear-gradient(135deg, #161616 0%, #0a0a0a 100%);
             border-radius: 16px;
             padding: 24px;
             text-align: center;
-            color: #222;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            color: var(--text-light);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
             margin-top: 10px;
         }
 
-        .gift-icon-box { font-size: 1.8rem; color: #111; margin-bottom: 8px; }
-        .physical-gift-card h3 { font-size: 1.1rem; font-weight: 700; color: #111; margin-bottom: 16px; }
+        .gift-icon-box { font-size: 1.8rem; color: var(--gold-primary); margin-bottom: 8px; }
+        .physical-gift-card h3 { font-family: var(--font-cinzel); font-size: 1.2rem; font-weight: 700; color: var(--gold-light); margin-bottom: 16px; }
 
-        .address-info { text-align: left; font-size: 0.85rem; line-height: 1.8; color: #444; max-width: 360px; margin: 0 auto; }
-        .address-info strong { color: #111; font-weight: 600; }
+        .address-info { text-align: left; font-size: 0.85rem; line-height: 1.8; color: #ccc; max-width: 360px; margin: 0 auto; }
+        .address-info strong { color: var(--gold-primary); font-weight: 600; }
 
         /* TOAST */
         .toast {
@@ -459,14 +487,14 @@
 </head>
 <body>
 
-    <!-- 1. COVER SECTION -->
+    <!-- 1. COVER SECTION (WITH COVER1.PNG) -->
     <section id="cover" class="cover-section">
-        <div class="cover-bg" style="background-image: url('assets/images/cover.jpg');"></div>
+        <div class="cover-bg"></div>
         <div class="cover-overlay"></div>
         <div class="cover-content container fade-up">
             <p class="subtitle">THE WEDDING OF</p>
-            <h1 class="couple-names"><span class="groom-name">Aditya</span> & <span class="bride-name">Alya</span></h1>
-            <p class="wedding-date">12 Desember 2026</p>
+            <h1 class="couple-names"><span class="groom-name">Arief Purnama, S.E</span> & <span class="bride-name">Nur Aisyah</span></h1>
+            <p class="wedding-date">17 Oktober 2026</p>
             
             <div class="guest-box">
                 <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
@@ -525,11 +553,11 @@
                     <!-- Groom -->
                     <div class="couple-card fade-up">
                         <div class="photo-wrapper">
-                            <img src="assets/images/groom.jpg" alt="Aditya Pratama" loading="lazy">
+                            <img src="cover1.png" alt="Asnan Makmur" loading="lazy">
                         </div>
-                        <h3 class="groom-full-name">Aditya Pratama</h3>
+                        <h3 class="groom-full-name">Asnan Makmur</h3>
                         <p class="parent-info">Putra dari<br>Ayah [Nama] & Ibu [Nama]</p>
-                        <a href="#" id="groom-ig" class="ig-link" target="_blank"><i class="fa-brands fa-instagram"></i> @adityapratama</a>
+                        <a href="#" id="groom-ig" class="ig-link" target="_blank"><i class="fa-brands fa-instagram"></i> @asnanmakmur</a>
                     </div>
 
                     <div class="couple-divider fade-up">&</div>
@@ -537,11 +565,11 @@
                     <!-- Bride -->
                     <div class="couple-card fade-up">
                         <div class="photo-wrapper">
-                            <img src="assets/images/bride.jpg" alt="Alya Maharani" loading="lazy">
+                            <img src="cover1.png" alt="Rismawati" loading="lazy">
                         </div>
-                        <h3 class="bride-full-name">Alya Maharani</h3>
+                        <h3 class="bride-full-name">Rismawati</h3>
                         <p class="parent-info">Putri dari<br>Ayah [Nama] & Ibu [Nama]</p>
-                        <a href="#" id="bride-ig" class="ig-link" target="_blank"><i class="fa-brands fa-instagram"></i> @alyamaharani</a>
+                        <a href="#" id="bride-ig" class="ig-link" target="_blank"><i class="fa-brands fa-instagram"></i> @rismawati</a>
                     </div>
                 </div>
             </div>
@@ -586,9 +614,9 @@
                         <h3>AKAD NIKAH</h3>
                         <div class="event-details">
                             <p><i class="fa-solid fa-calendar-days"></i> <span id="akad-date">12 Desember 2026</span></p>
-                            <p><i class="fa-solid fa-clock"></i> <span id="akad-time">08:00 - 10:00 WIB</span></p>
-                            <p><i class="fa-solid fa-location-dot"></i> <span id="akad-venue">Gedung Pernikahan Harmoni</span></p>
-                            <p class="address" id="akad-address">Jl. Melati No. 123, Kota Jakarta</p>
+                            <p><i class="fa-solid fa-clock"></i> <span id="akad-time">08:00 - 10:00 WITA</span></p>
+                            <p><i class="fa-solid fa-location-dot"></i> <span id="akad-venue">Kediaman Mempelai Wanita</span></p>
+                            <p class="address" id="akad-address">Jl Rappocini Raya Lr 2 No 11, Makassar</p>
                         </div>
                         <a href="#" id="akad-maps" class="btn-secondary" target="_blank">Lihat Lokasi</a>
                     </div>
@@ -598,9 +626,9 @@
                         <h3>RESEPSI</h3>
                         <div class="event-details">
                             <p><i class="fa-solid fa-calendar-days"></i> <span id="reception-date">12 Desember 2026</span></p>
-                            <p><i class="fa-solid fa-clock"></i> <span id="reception-time">11:00 - 13:00 WIB</span></p>
-                            <p><i class="fa-solid fa-location-dot"></i> <span id="reception-venue">Gedung Pernikahan Harmoni</span></p>
-                            <p class="address" id="reception-address">Jl. Melati No. 123, Kota Jakarta</p>
+                            <p><i class="fa-solid fa-clock"></i> <span id="reception-time">11:00 WITA - Selesai</span></p>
+                            <p><i class="fa-solid fa-location-dot"></i> <span id="reception-venue">Kediaman Mempelai Wanita</span></p>
+                            <p class="address" id="reception-address">Jl Rappocini Raya Lr 2 No 11, Makassar</p>
                         </div>
                         <a href="#" id="reception-maps" class="btn-secondary" target="_blank">Lihat Lokasi</a>
                     </div>
@@ -701,21 +729,23 @@
             </div>
         </section>
 
-        <!-- 11. DIGITAL GIFT -->
+        <!-- 11. DIGITAL GIFT (DARK GOLD REDESIGN) -->
         <section id="gift" class="section gift-section">
-            <div class="container text-center">
+            <div class="container">
                 <div class="section-title fade-up">
                     <p class="subtitle">Tanda Kasih</p>
                     <h2>Wedding Gift</h2>
-                    <p class="gift-desc">Doa dan kehadiran Anda merupakan hadiah terindah bagi kami. Namun bagi yang ingin memberikan tanda kasih, dapat melalui:</p>
                 </div>
+                <p class="gift-desc fade-up">Doa dan kehadiran Anda merupakan hadiah terindah bagi kami. Namun bagi yang ingin memberikan tanda kasih, dapat melalui:</p>
 
                 <div class="gift-cards-wrapper">
-                    <!-- Kartu BCA -->
+                    <!-- Kartu ATM Bank BCA (Dark Gold) -->
                     <div class="atm-card fade-up">
                         <div class="card-header-row">
                             <div class="chip"></div>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" alt="BCA Logo" class="bank-logo-img">
+                            <div class="bank-logo-container">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" alt="BCA Logo" class="bank-logo-img">
+                            </div>
                         </div>
                         <div class="card-number" id="gift-account">0737687529</div>
                         <div class="card-holder" id="gift-account-name">RISMAWATI</div>
@@ -724,20 +754,22 @@
                         </button>
                     </div>
 
-                    <!-- Kartu Mandiri (Opsional) -->
+                    <!-- Kartu ATM Bank Mandiri (Dark Gold) -->
                     <div class="atm-card fade-up" id="bank-2-wrapper">
                         <div class="card-header-row">
                             <div class="chip"></div>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Bank_Mandiri_logo_2016.svg" alt="Mandiri Logo" class="bank-logo-img">
+                            <div class="bank-logo-container">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Bank_Mandiri_logo_2016.svg" alt="Mandiri Logo" class="bank-logo-img">
+                            </div>
                         </div>
                         <div class="card-number" id="gift-account-2">0987654321</div>
-                        <div class="card-holder" id="gift-account-name-2">ADITYA PRATAMA</div>
+                        <div class="card-holder" id="gift-account-name-2">ASNAN MAKMUR</div>
                         <button class="btn-copy-floating copy-btn" data-clipboard="0987654321">
                             <i class="fa-regular fa-copy"></i> Copy
                         </button>
                     </div>
 
-                    <!-- Kartu Pengiriman Kado Fisik -->
+                    <!-- Kartu Pengiriman Kado Fisik (Dark Gold) -->
                     <div class="physical-gift-card fade-up">
                         <div class="gift-icon-box">
                             <i class="fa-solid fa-gift"></i>
@@ -746,7 +778,7 @@
                         <div class="address-info">
                             <p><strong>Nama Penerima :</strong> <span id="gift-receiver">RISMAWATI</span></p>
                             <p><strong>No. HP :</strong> <span id="gift-phone">0895361809795</span></p>
-                            <p><strong>Alamat :</strong> <span id="gift-address">Jl Rappocini Raya Lr 2 No 11</span></p>
+                            <p><strong>Alamat :</strong> <span id="gift-address">Jl Rappocini Raya Lr 2 No 11, Makassar</span></p>
                         </div>
                     </div>
                 </div>
@@ -760,12 +792,12 @@
         <section id="closing" class="section closing-section text-center">
             <div class="container fade-up">
                 <div class="closing-photo">
-                    <img src="assets/images/cover.jpg" alt="Couple" loading="lazy">
+                    <img src="cover1.png" alt="Couple" loading="lazy">
                 </div>
                 <p class="closing-text">
                     Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
                 </p>
-                <h2 class="couple-names-closing"><span class="groom-name">Aditya</span> & <span class="bride-name">Alya</span></h2>
+                <h2 class="couple-names-closing"><span class="groom-name">Asnan</span> & <span class="bride-name">Risma</span></h2>
                 <p class="thank-you">Thank You</p>
             </div>
         </section>
@@ -777,63 +809,60 @@
         const WEDDING_CONFIG = {
             couple: {
                 groom: {
-                    name: "Aditya Pratama",
-                    nickname: "Adit",
-                    father: "Bapak Pratama",
-                    mother: "Ibu Pratama",
+                    name: "Arief Purnama, S.E",
+                    nickname: "Arief",
+                    father: "Bapak Alm. Bumiari dg Paewa",
+                    mother: "Ibu Nurbiari dg Rabi",
                     instagram: "https://instagram.com",
-                    instagramUsername: "@adityapratama",
-                    photo: "assets/images/groom.jpg"
+                    instagramUsername: "",
+                    photo: "groom.jpg"
                 },
                 bride: {
-                    name: "Alya Maharani",
-                    nickname: "Alya",
-                    father: "Bapak Maharani",
-                    mother: "Ibu Maharani",
+                    name: "Nur Aisyah",
+                    nickname: "Icha",
+                    father: "Bapak Abd Rajab dg Sanu",
+                    mother: "Ibu Syamsiah dg Taco",
                     instagram: "https://instagram.com",
-                    instagramUsername: "@alyamaharani",
-                    photo: "assets/images/bride.jpg"
+                    instagramUsername: "@nuraisyahh_19",
+                    photo: "bride.jpg"
                 }
             },
             event: {
                 akad: {
-                    date: "12 Desember 2026",
-                    startTime: "08:00",
-                    endTime: "10:00",
-                    venue: "Gedung Pernikahan Harmoni",
-                    address: "Jl. Melati No. 123, Kota Jakarta",
-                    mapsUrl: "https://goo.gl/maps/example"
+                    date: "17 Oktober 2026",
+                    startTime: "10:00 WITA",
+                    endTime: "Selesai",
+                    venue: "Kediaman Mempelai Wanita",
+                    address: "Jl Pampang 2 Lr 4, Makassar",
+                    mapsUrl: "https://maps.google.com"
                 },
                 reception: {
-                    date: "12 Desember 2026",
-                    startTime: "11:00",
-                    endTime: "13:00",
-                    venue: "Gedung Pernikahan Harmoni",
-                    address: "Jl. Melati No. 123, Kota Jakarta",
-                    mapsUrl: "https://goo.gl/maps/example"
+                    date: "17 Oktober 2026",
+                    startTime: "19:00 WITA",
+                    endTime: "Selesai",
+                    venue: "Kediaman Mempelai Wanita",
+                    address: "Jl Pampang 2 Lr 4, Makassar",
+                    mapsUrl: "https://maps.google.com"
                 }
             },
-            countdownDate: "2026-12-12T08:00:00",
+            countdownDate: "2026-10-17T11:00:00",
             story: [
-                { year: "2019", title: "First Meet", description: "Kami pertama kali bertemu di sebuah acara seminar kampus." },
-                { year: "2021", title: "First Date", description: "Menjalani komitmen dan memutuskan untuk saling mengenal lebih dekat." },
-                { year: "2024", title: "Engagement", description: "Melangkah ke jenjang yang lebih serius dengan melangsungkan pertunangan." },
-                { year: "2026", title: "The Wedding", description: "Hari bahagia di mana kami menyatukan janji suci pernikahan." }
+                { year: "2020", title: "Awal Pertemuan", description: "Perjalanan awal yang saling mengenal satu sama lain." },
+                { year: "2023", title: "Menjalin Komitmen", description: "Memutuskan untuk saling mendampingi dan melangkah lebih jauh." },
+                { year: "2026", title: "Pernikahan", description: "Menyatukan niat suci dalam ikatan pernikahan." }
             ],
             gallery: [
-                "assets/images/gallery-1.jpg",
-                "assets/images/gallery-2.jpg",
-                "assets/images/gallery-3.jpg",
-                "assets/images/gallery-4.jpg"
+                "cover1.png",
+                "cover1.png",
+                "cover1.png",
+                "cover1.png"
             ],
             gift: {
-                accountNumber: "0737687529",
-                accountName: "RISMAWATI",
-                accountNumber2: "0987654321",
-                accountName2: "ADITYA PRATAMA",
-                receiver: "RISMAWATI",
+                accountNumber: "066401002744535",
+                accountName: "NUR AISYAH",
+                receiver: "NUR AISYAH",
                 phone: "0895361809795",
-                address: "Jl Rappocini Raya Lr 2 No 11"
+                address: "Jl Pampang 2 Lr 4, Makassar"
             },
             rsvp: { apiUrl: "" }
         };
@@ -859,19 +888,19 @@
             document.querySelectorAll(".parent-info")[1].innerHTML = `Putri dari<br>${WEDDING_CONFIG.couple.bride.father} & ${WEDDING_CONFIG.couple.bride.mother}`;
 
             document.getElementById("akad-date").textContent = WEDDING_CONFIG.event.akad.date;
-            document.getElementById("akad-time").textContent = `${WEDDING_CONFIG.event.akad.startTime} - ${WEDDING_CONFIG.event.akad.endTime} WIB`;
+            document.getElementById("akad-time").textContent = `${WEDDING_CONFIG.event.akad.startTime} - ${WEDDING_CONFIG.event.akad.endTime} WITA`;
             document.getElementById("akad-venue").textContent = WEDDING_CONFIG.event.akad.venue;
             document.getElementById("akad-address").textContent = WEDDING_CONFIG.event.akad.address;
             document.getElementById("akad-maps").href = WEDDING_CONFIG.event.akad.mapsUrl;
 
             document.getElementById("reception-date").textContent = WEDDING_CONFIG.event.reception.date;
-            document.getElementById("reception-time").textContent = `${WEDDING_CONFIG.event.reception.startTime} - ${WEDDING_CONFIG.event.reception.endTime} WIB`;
+            document.getElementById("reception-time").textContent = `${WEDDING_CONFIG.event.reception.startTime} WITA - ${WEDDING_CONFIG.event.reception.endTime}`;
             document.getElementById("reception-venue").textContent = WEDDING_CONFIG.event.reception.venue;
             document.getElementById("reception-address").textContent = WEDDING_CONFIG.event.reception.address;
             document.getElementById("reception-maps").href = WEDDING_CONFIG.event.reception.mapsUrl;
 
             document.getElementById("main-maps-btn").href = WEDDING_CONFIG.event.reception.mapsUrl;
-            document.getElementById("map-iframe").src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.81956135045434!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f43f988cad1f%3A0x6b2e3f890731df46!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid";
+            document.getElementById("map-iframe").src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.7431308381467!2d119.4312383!3d-5.1609139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMDknMzkuMyJTIDExOcKwMjUnNTIuNCJF!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid";
 
             // Gift Configuration
             document.getElementById("gift-account").textContent = WEDDING_CONFIG.gift.accountNumber;
