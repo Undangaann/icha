@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Imma & Wahyu</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Audio Player Background -->
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+    </audio>
+
+    <button id="music-toggle" class="music-btn" aria-label="Toggle Audio">
+        <i class="fas fa-music"></i>
+    </button>
+
+    <!-- SECTION 1: COVER / HERO (OPENING MODAL STYLE) -->
+    <section id="cover" class="cover-section">
+        <div class="mandala-bg top-mandala"></div>
+        <div class="cover-overlay"></div>
+        
+        <div class="cover-content" data-aos="fade-up">
+            <div class="ornament-header">✨ WALIMATUL 'URSY ✨</div>
+            <h1 class="couple-names">Imma & Wahyu</h1>
+            <p class="wedding-date"><i class="far fa-calendar-alt"></i> Sabtu, 24 Oktober 2026</p>
+            
+            <div class="recipient-card">
+                <span class="to-label">Kepada Yth. Bapak/Ibu/Saudara/i:</span>
+                <h2 id="guest-name" class="guest-name">Nama Tamu Undangan</h2>
+                <p class="guest-note">Tanpa Mengurangi Rasa Hormat, Kami Mengundang Anda Untuk Hadir Di Acara Pernikahan Kami.</p>
+            </div>
+
+            <button id="open-invitation" class="btn-gold glow">
+                <i class="fas fa-envelope-open-text"></i> Buka Undangan
+            </button>
+        </div>
+
+        <div class="mandala-bg bottom-mandala"></div>
+    </section>
+
+    <!-- MAIN INVITATION CONTENT (HIDDEN UNTIL UNLOCKED) -->
+    <main id="main-content" class="main-content hidden">
+
+        <!-- STICKY NAVBAR -->
+        <nav class="bottom-nav">
+            <a href="#hero-main" class="nav-item active"><i class="fas fa-home"></i><span>Beranda</span></a>
+            <a href="#couple" class="nav-item"><i class="fas fa-heart"></i><span>Mempelai</span></a>
+            <a href="#event" class="nav-item"><i class="fas fa-calendar-check"></i><span>Acara</span></a>
+            <a href="#gallery" class="nav-item"><i class="fas fa-images"></i><span>Galeri</span></a>
+            <a href="#wishes" class="nav-item"><i class="fas fa-comment-dots"></i><span>Ucapan</span></a>
+        </nav>
+
+        <!-- SECTION MAIN HERO -->
+        <section id="hero-main" class="hero-main-section">
+            <div class="hero-frame" data-aos="zoom-in">
+                <div class="mandala-watermark"></div>
+                <div class="hero-text-box">
+                    <p class="sub-title">UNDANGAN PERNIKAHAN</p>
+                    <h1 class="couple-title">Imma & Wahyu</h1>
+                    <p class="hero-date">24 OKTOBER 2026</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION AYAT / QUOTE -->
+        <section class="quote-section container">
+            <div class="quote-card" data-aos="fade-up">
+                <div class="arabic-text">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</div>
+                <p class="quote-translation">
+                    "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari meksikumu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang."
+                </p>
+                <span class="quote-source">(QS. Ar-Rum: 21)</span>
+            </div>
+        </section>
+
+        <!-- SECTION COUPLE -->
+        <section id="couple" class="couple-section container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="gold-title">Mempelai Pria & Wanita</h2>
+                <div class="gold-divider"><span>♦</span></div>
+                <p>Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.</p>
+            </div>
+
+            <div class="couple-grid">
+                <!-- Groom -->
+                <div class="couple-card" data-aos="fade-right">
+                    <div class="photo-frame">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Wahyu Sulistyo, S.T." class="groom-photo">
+                        <div class="frame-border"></div>
+                    </div>
+                    <h3 class="person-name">Wahyu Sulistyo, S.T.</h3>
+                    <p class="parent-info">Putra Pertama dari<br><b>Bpk. H. Ahmad Sudrajat</b> & <b>Ibu Hj. Siti Rahmah</b></p>
+                    <div class="social-link">
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> @wahyu_st</a>
+                    </div>
+                </div>
+
+                <div class="couple-ampersand" data-aos="zoom-in">&</div>
+
+                <!-- Bride -->
+                <div class="couple-card" data-aos="fade-left">
+                    <div class="photo-frame">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Imma Nur Hayati, S.Pd." class="bride-photo">
+                        <div class="frame-border"></div>
+                    </div>
+                    <h3 class="person-name">Imma Nur Hayati, S.Pd.</h3>
+                    <p class="parent-info">Putri Kedua dari<br><b>Bpk. Drs. Muhammad Said</b> & <b>Ibu Hj. Aminah</b></p>
+                    <div class="social-link">
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> @imma_nh</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION COUNTDOWN -->
+        <section class="countdown-section">
+            <div class="container" data-aos="fade-up">
+                <h2 class="gold-title">Menghitung Hari</h2>
+                <p class="sub-lead">Menuju Hari Bahagia Kami</p>
+                <div id="countdown" class="countdown-grid">
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <small>Hari</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <small>Jam</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="minutes">00</span>
+                        <small>Menit</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="seconds">00</span>
+                        <small>Detik</small>
+                    </div>
+                </div>
+                <a href="#event" class="btn-gold btn-sm"><i class="far fa-calendar-plus"></i> Simpan Tanggal</a>
+            </div>
+        </section>
+
+        <!-- SECTION EVENT DETAILS -->
+        <section id="event" class="event-section container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="gold-title">Rangkaian Acara</h2>
+                <div class="gold-divider"><span>♦</span></div>
+            </div>
+
+            <div class="event-cards-wrapper">
+                <!-- AKAD NIKAH -->
+                <div class="event-card" data-aos="fade-up">
+                    <div class="event-badge"><i class="fas fa-ring"></i></div>
+                    <h3>Akad Nikah</h3>
+                    <div class="event-time">
+                        <p><i class="far fa-calendar"></i> Sabtu, 24 Oktober 2026</p>
+                        <p><i class="far fa-clock"></i> 08.00 - 10.00 WITA</p>
+                    </div>
+                    <div class="event-location">
+                        <p class="loc-name">Grand Clarita Ballroom & Hotel</p>
+                        <p class="loc-address">Jl. AP Pettarani No. 88, Makassar, Sulawesi Selatan</p>
+                    </div>
+                    <a href="https://maps.google.com" target="_blank" class="btn-outline-gold">
+                        <i class="fas fa-map-marked-alt"></i> Buka Google Maps
+                    </a>
+                </div>
+
+                <!-- RESEPSI PERNIKAHAN -->
+                <div class="event-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="event-badge"><i class="fas fa-glass-cheers"></i></div>
+                    <h3>Resepsi Pernikahan</h3>
+                    <div class="event-time">
+                        <p><i class="far fa-calendar"></i> Sabtu, 24 Oktober 2026</p>
+                        <p><i class="far fa-clock"></i> 11.00 - Selesai WITA</p>
+                    </div>
+                    <div class="event-location">
+                        <p class="loc-name">Grand Clarita Ballroom & Hotel</p>
+                        <p class="loc-address">Jl. AP Pettarani No. 88, Makassar, Sulawesi Selatan</p>
+                    </div>
+                    <a href="https://maps.google.com" target="_blank" class="btn-outline-gold">
+                        <i class="fas fa-map-marked-alt"></i> Buka Google Maps
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION GALLERY -->
+        <section id="gallery" class="gallery-section container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="gold-title">Galeri Momen Bahagia</h2>
+                <div class="gold-divider"><span>♦</span></div>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Gallery Photo 1">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Gallery Photo 2">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80" alt="Gallery Photo 3">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" alt="Gallery Photo 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION DIGITAL GIFT / ANGPAO -->
+        <section class="gift-section container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="gold-title">Hadiah Digital</h2>
+                <div class="gold-divider"><span>♦</span></div>
+                <p>Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberikan tanda kasih, Anda dapat menyalurkannya melalui:</p>
+            </div>
+
+            <div class="bank-cards-grid">
+                <!-- Bank 1 -->
+                <div class="bank-card" data-aos="flip-left">
+                    <div class="bank-logo">BCA</div>
+                    <div class="bank-number" id="account-bca">1234 5678 9012</div>
+                    <div class="bank-holder">a.n. Wahyu Sulistyo</div>
+                    <button class="btn-copy" onclick="copyText('account-bca')">
+                        <i class="far fa-copy"></i> Salin Nomor Rekening
+                    </button>
+                </div>
+
+                <!-- Bank 2 -->
+                <div class="bank-card" data-aos="flip-right">
+                    <div class="bank-logo">MANDIRI</div>
+                    <div class="bank-number" id="account-mandiri">9876 5432 1098</div>
+                    <div class="bank-holder">a.n. Imma Nur Hayati</div>
+                    <button class="btn-copy" onclick="copyText('account-mandiri')">
+                        <i class="far fa-copy"></i> Salin Nomor Rekening
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION RSVP & WISHES -->
+        <section id="wishes" class="wishes-section container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="gold-title">Ucapan & Konfirmasi Kehadiran</h2>
+                <div class="gold-divider"><span>♦</span></div>
+                <p>Berikan doa restu dan konfirmasi kehadiran Anda untuk memperindah momen bahagia kami.</p>
+            </div>
+
+            <div class="wishes-wrapper">
+                <!-- Form RSVP -->
+                <form id="rsvp-form" class="rsvp-form" data-aos="fade-right">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" placeholder="Masukkan nama Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="attendance">Konfirmasi Kehadiran</label>
+                        <select id="attendance" required>
+                            <option value="">-- Pilih Kehadiran --</option>
+                            <option value="Hadir">Hadir</option>
+                            <option value="Tidak Hadir">Tidak Hadir</option>
+                            <option value="Ragu-ragu">Ragu-ragu</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Ucapan & Doa Restu</label>
+                        <textarea id="message" rows="4" placeholder="Tuliskan doa & ucapan selamat..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-gold w-100">
+                        <i class="fas fa-paper-plane"></i> Kirim Ucapan
+                    </button>
+                </form>
+
+                <!-- List Ucapan -->
+                <div class="wishes-display" data-aos="fade-left">
+                    <h3 class="wishes-count"><i class="fas fa-comments"></i> Doa Restu (<span id="count-total">2</span>)</h3>
+                    <div id="wishes-list" class="wishes-list">
+                        <div class="wish-item">
+                            <div class="wish-header">
+                                <strong>Sri Mega Yunita K</strong>
+                                <span class="badge-present"><i class="fas fa-check-circle"></i> Hadir</span>
+                            </div>
+                            <p class="wish-text">Barakallahu lakuma wa baraka 'alaikuma wa jama'a bainakuma fii khair. Selamat untuk Imma dan Wahyu! Semoga menjadi keluarga yang sakinah mawaddah warahmah. Aamiin!</p>
+                            <span class="wish-time">Baru saja</span>
+                        </div>
+                        <div class="wish-item">
+                            <div class="wish-header">
+                                <strong>Ahmad Fauzi</strong>
+                                <span class="badge-present"><i class="fas fa-check-circle"></i> Hadir</span>
+                            </div>
+                            <p class="wish-text">Selamat bro Wahyu dan Mbak Imma! Semoga dilancarkan semua prosesinya sampai hari H.</p>
+                            <span class="wish-time">1 jam yang lalu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container text-center">
+                <p class="thank-you">Merupakan Suatu Kehormatan & Kebahagiaan Bagi Kami Apabila Bapak/Ibu/Saudara/i Pertemanan Berkenan Hadir Memberikan Doa Restu.</p>
+                <h3 class="footer-names">Imma & Wahyu</h3>
+                <p class="copyright">&copy; 2026 Crafted with ♥ - Theme Dark Gold Traditional Elegance</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast hidden">Pesan berhasil disalin!</div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
